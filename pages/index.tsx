@@ -16,8 +16,8 @@ const Home: NextPage = () => {
       
       <div className={styles.intro}>
         
-      <h1>Hi, I'm <span className={styles.name}>Jonathon</span></h1>
-      <p>I'm an Software/QA Engineer based in Ocala, Fl.</p>
+      <h1>Hi, I am <span className={styles.name}>Jonathon</span></h1>
+      <p>I am a Software/QA Engineer based in Ocala, Fl.</p>
       <div className={styles.socials}>
         <a href="https://github.com/FFCoder" target="_blank" rel="noreferrer">
           <BsGithub />

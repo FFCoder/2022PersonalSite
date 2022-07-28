@@ -49,6 +49,12 @@
   color: rgb(22, 40, 159);
 }
 
+.name:hover {
+  color: #FFF;
+  background-color: #000000;
+  font-family: monospace;
+}
+
 .mainHeader:hover {
   width: 20%;
   transition: width 0.5s linear 0.2s;
@@ -65,11 +71,13 @@
   margin-left: auto;
   margin-right: 1rem;
   clip-path: ellipse(40% 40% at 50% 50%);
+  
 }
 
 .topBox img {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  
   
 }
 
