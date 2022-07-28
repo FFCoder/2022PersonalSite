@@ -1,6 +1,107 @@
+@import url("/fonts/landasans.otf");
+
+.mainContainer {
+  font-size: larger;
+  font-family: "Landasans Medium", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.socials {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials *:hover {
+  color:rgb(22, 40, 159);
+  cursor: pointer;
+}
+
+.socials * {
+  margin: 0.5rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.name {
+  font-size: 3rem;
+  font-family: "Landasans Medium", sans-serif;
+  color: rgb(22, 40, 159);
+}
+
+.mainHeader:hover {
+  width: 20%;
+  transition: width 0.5s linear 0.2s;
+}
+
+.topBox {
+  min-width: 50%;
+  min-height: 20rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 1rem;
+  clip-path: ellipse(40% 40% at 50% 50%);
+}
+
+.topBox img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  
+}
+
 .container {
   padding: 0 2rem;
 }
+
+.arrowBG {
+  background: rgb(22, 40, 159);
+  min-height: 100%;
+  min-width: 40rem;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -17px 9px 12px 1px rgba(255, 255, 255, 0.75);
+  -webkit-box-shadow: -17px 9px 12px 1px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: -17px 9px 12px 1px rgba(255, 255, 255, 0.75);
+  clip-path: polygon(100% 0%, 100% 100%, 40% 100%, 0% 50%, 48% 0);
+  animation: scaleWidth 0.5s alternate infinite;
+}
+
+@keyframes scaleWidth {
+  0% {
+    clip-path: polygon(100% 0%, 100% 100%, 40% 100%, 10% 50%, 48% 0);
+  }
+  100% {
+    clip-path: polygon(100% 0%, 100% 100%, 40% 100%, 0% 50%, 48% 0);;
+  }
+}
+
 
 .main {
   min-height: 100vh;
@@ -109,9 +210,30 @@
 }
 
 @media (max-width: 600px) {
-  .grid {
-    width: 100%;
+  .mainContainer {
     flex-direction: column;
+  }
+  .arrowBG {
+    clip-path: fill-box;
+    animation: none;
+    min-height: 30%;
+    max-height: 50vh;
+    margin: 0;
+    background-color: #000000;
+    
+    
+    
+  }
+  .topBox {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+    box-shadow: none;
+  }
+  .intro {
+    height: 60%;
+    padding: 3rem;
+    
   }
 }
 
@@ -127,3 +249,4 @@
     filter: invert(1);
   }
 }
+
